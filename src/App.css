@@ -1,22 +1,226 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+#root {
+  background-color: #E2E3E3;
+  height: 100vh;
+}
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 20px;
+  justify-content: space-between;
+  padding: 20px 15px;
 }
 
-.App-link {
-  color: #09d3ac;
+.icon-container {
+  background-color: blue;
+  width: 20px;
+  height: 20px;
+  border-radius: 25px;
+}
+
+.header-container i {
+  color: white;
+  font-size: .8em;
+}
+
+.summary-container {
+  background-color: white;
+  margin: 2px 2px;
+}
+
+.nodes-summary {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.nodes-summary .square {
+  flex-direction: column;
+  border-right: 1px solid #ccc;
+}
+
+.nodes-summary :nth-child(4) {
+  border: none;
+}
+
+.resouces-summary {
+  display: flex;
+  justify-content: center;
+}
+
+.resouces-summary .square {
+  flex-direction: column;
+  border-right: 1px solid #ccc;
+}
+
+.resouces-summary :nth-child(4) {
+  border: none;
+}
+
+.square {
+  width: 100px;
+  height: 60px;
+  margin: 6px;
+  padding: 20px 5px;
+}
+
+.square-number {
+  font-size: 20px;
+  color: grey;
+}
+
+.square-description {
+  font-size: 10px;
+  line-height: 16px;
+}
+
+.fa {
+  color: #ccc;
+}
+
+.card-container {
+  margin: auto;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 600px;
+}
+
+.card {
+  background-color: white;
+  width: 160px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  box-shadow: inset 0 0 5px #8E9190;
+  opacity: 0.8;
+  transition: 700ms;
+}
+
+.card:hover {
+  opacity: 1;
+  transform: translateZ(0) scale(1.05);
+  cursor: pointer;
+}
+
+.upper-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px 5px 0px 5px;;
+}
+
+.role-box {
+  border: 1px solid blue;
+  font-size: 10px;
+  font-weight: bold;
+  width: 10px;
+  height: 10px;
+  line-height: 10px;
+  align-items: baseline;
+}
+
+.name {
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: bolder;
+  width: 90%;
+  text-align: left;
+  margin-left: 2px;
+}
+
+.state-on {
+  height: 5px;
+  width: 5px;
+  background-color: green;
+  border-radius: 50%;
+}
+
+.state-off {
+  height: 5px;
+  width: 5px;
+  background-color: gray;
+  border-radius: 50%;
+}
+
+.status {
+  border: 1px solid green;
+}
+
+.offline {
+  border: 1px solid gray;
+}
+
+.faulted {
+  border: 1px solid red;
+}
+
+.pool {
+  margin-left: 18px;
+  margin-bottom: 5px;
+  width: 40px;
+  font-size: 10px;
+  background-color: #51F4C2;
+  border-radius: 10px;
+}
+
+.card-body {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px 10px 5px 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.body-item {
+  width: 60px;
+  height: 50px;
+}
+
+.body-item h2 {
+  margin-bottom: 6px;
+  color: grey;
+}
+
+.body-item p {
+  font-size: 12px;
+}
+
+.card-footer {
+  height: 70px;
+}
+
+.bar {
+  position: relative;
+  text-align: left;
+  padding-left: 10px;
+  font-size: 10px;
+}
+
+.val {
+  position: absolute;
+  right: 10px;
 }
