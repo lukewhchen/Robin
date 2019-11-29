@@ -21,7 +21,7 @@ class App extends React.Component {
     let nodes = this.getNodes();
     this.setState({ nodes: nodes })
   }
-
+// refactor getNodes to separate file
   getNodes(){
     var nodes = [];
     var count = 1 + Math.floor(Math.random() * 10); // 1-10
