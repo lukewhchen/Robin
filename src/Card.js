@@ -1,7 +1,6 @@
 import React from 'react';
 
 export default function Card(props) {
-  // let jsonStr = JSON.stringify(props.node)
   let node = props.node;
   let role = node.role[0];
   let name = node.name;
